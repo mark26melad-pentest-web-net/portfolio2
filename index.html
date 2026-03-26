@@ -3,15 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mark Melad | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>My Portfolio</h1>
-    <img src="images/portfolio/image.png" alt="Portfolio Image">
-    <img src="images/pentest3/image.png" alt="Pentest3 Image">
-    <img src="images/Screenshot/image.png" alt="Screenshot Image">
-    <img src="images/python/image.png" alt="Python Image">
-    <img src="images/pentest/image.png" alt="Pentest Image">
-    <img src="images/pentest2/image.png" alt="Pentest2 Image">
+<body class="bg-cyber">
+    <!-- Birthday Banner -->
+    <div id="birthday-banner" class="birthday-banner">
+        <div class="birthday-content">🎂🎉 Happy Birthday to Me! 🎉🎂</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-cyan-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Orbitron'] text-cyan-400 glow-text">Mark</a>
+            <button class="md:hidden text-2xl text-white" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links hidden md:flex">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="themeToggle" class="text-2xl" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="text-cyan-400 mb-2">🛡️ Cybersecurity Specialist</p>
+            <h1 class="text-4xl md:text-6xl font-['Orbitron'] mb-4">
+                <span class="text-white">Hi, I'm </span>
+                <span class="text-cyan-400 glow-text">Mark Melad</span>
+            </h1>
+            <div class="flex justify-center mb-4">
+                <img src="css/portfolio.jpg" alt="Mark Melad" 
+                     class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-cyan-500/50 shadow-[0_0_30px_rgba(6,174,216,0.5)]"
+                     onerror="this.style.display='none'">
+            </div>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">Student at Nahda University - Specialized in Cybersecurity, Ethical Hacking & Network Security</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#contact" class="cyber-new">Get In Touch</a>
+                <a href="#projects" class="cyber-new">View My Work</a>
+            </div>
+            <div class="mt-8 flex gap-4 justify-center">
+                <a href="https://www.linkedin.com/in/mark-s-157758298" target="_blank" class="text-3xl text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com" target="_blank" class="text-3xl text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="text-left">
+                <h3 class="text-2xl text-cyan-400 mb-4 font-['Orbitron']">Mark Melad Ebrahim Shaker</h3>
+                <p class="text-gray-300 leading-relaxed mb-4">🎓 Student at <strong>Nahda University</strong> - Faculty of Information Technology</p>
+                <p class="text-gray-300 leading-relaxed mb-4">I'm passionate about <strong>Cybersecurity</strong> and dedicated to protecting systems from digital threats.</p>
+                <p class="text-cyan-400 text-lg mt-6">💼 Looking for a reliable developer? Let's work together!</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-cyan-500/50 overflow-hidden shadow-[0_0_30px_rgba(6,174,216,0.5)]">
+                    <img src="css/portfolio.jpg" alt="Mark Melad" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card"><div class="skill-icon">🐍</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">Python</h3><p class="text-sm text-gray-400 mt-2">AI - Fake Image Detection</p></div>
+            <div class="skill-card"><div class="skill-icon">🌐</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">PHP & MySQL</h3><p class="text-sm text-gray-400 mt-2">Backend Development</p></div>
+            <div class="skill-card"><div class="skill-icon">🎨</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">HTML & CSS</h3><p class="text-sm text-gray-400 mt-2">Frontend & Design</p></div>
+            <div class="skill-card"><div class="skill-icon">⚡</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">C++</h3><p class="text-sm text-gray-400 mt-2">Programming</p></div>
+            <div class="skill-card"><div class="skill-icon">🔐</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">CEH</h3><p class="text-sm text-gray-400 mt-2">Certified Ethical Hacker</p></div>
+            <div class="skill-card"><div class="skill-icon">📡</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">CCNA</h3><p class="text-sm text-gray-400 mt-2">Network Security</p></div>
+            <div class="skill-card"><div class="skill-icon">🔒</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">Cybersecurity</h3><p class="text-sm text-gray-400 mt-2">Penetration Testing</p></div>
+            <div class="skill-card"><div class="skill-icon">🎯</div><h3 class="text-xl font-['Orbitron'] text-cyan-400">CTF</h3><p class="text-sm text-gray-400 mt-2">Capture The Flag</p></div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates">
+        <h2 class="section-title">My Certificates</h2>
+        <p class="text-center text-gray-400 mb-8">Professional certifications in Cybersecurity</p>
+        <div class="certificates-wrapper">
+            <div class="certificates-inner">
+                <div class="certificate-card" style="--index:0">
+                    <img src="/css/pentest3.png" alt="Certificate" class="certificate-img" onerror="this.style.display='none'">
+                    <div class="cert-title">CEH - Certified Ethical Hacker</div>
+                </div>
+                <div class="certificate-card" style="--index:1">
+                    <img src="css/Screenshot 2026-03-26 004519.png" alt="Certificate" class="certificate-img" onerror="this.style.display='none'">
+                    <div class="cert-title">CCNA - Network Security</div>
+                </div>
+                <div class="certificate-card" style="--index:2">
+                    <img src="css/python.png" alt="Certificate" class="certificate-img" onerror="this.style.display='none'">
+                    <div class="cert-title">Pentest Certificate</div>
+                </div>
+                <div class="certificate-card" style="--index:3">
+                    <img src="css/pentest.png" alt="Certificate" class="certificate-img" onerror="this.style.display='none'">
+                    <div class="cert-title">Security Certificate</div>
+                </div>
+                <div class="certificate-card" style="--index:4">
+                    <img src="css/pentest2.png" alt="Certificate" class="certificate-img" onerror="this.style.display='none'">
+                    <div class="cert-title">Python Certificate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card"><div class="project-image">🤖</div><div class="project-info"><h3 class="project-title">AI Fake Image Detector</h3><p class="text-gray-400 mt-2">Python app that detects AI-generated vs real images</p></div></div>
+            <div class="project-card"><div class="project-image">💧</div><div class="project-info"><h3 class="project-title">Soil Moisture System</h3><p class="text-gray-400 mt-2">Embedded system for automatic plant watering</p></div></div>
+            <div class="project-card"><div class="project-image">🏦</div><div class="project-info"><h3 class="project-title">Mini Bank System</h3><p class="text-gray-400 mt-2">C++ banking system</p></div></div>
+            <div class="project-card"><div class="project-image">🔐</div><div class="project-info"><h3 class="project-title">CTF Challenges</h3><p class="text-gray-400 mt-2">Solved various security challenges</p></div></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div id="birthday-wishes" class="birthday-wishes-section">
+            <h3 class="text-2xl text-cyan-400 mb-4 font-['Orbitron']">🎂🎉 Send Your Birthday Wishes! 🎉🎂</h3>
+            <p class="text-gray-300 mb-8">Leave your birthday message below!</p>
+            <form action="https://formspree.io/f/xeepqgwe" method="POST" class="wishes-form" onsubmit="showWishConfirmation(event)">
+                <div class="input-container">
+                    <div class="input-content">
+                        <div class="input-dist">
+                            <div class="input-type">
+                                <input type="text" name="name" class="input-is" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-content">
+                        <div class="input-dist">
+                            <div class="input-type">
+                                <input type="text" name="message" class="input-is" placeholder="Your Birthday Message" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="cyber-new">🎁 Send Wish</button>
+            </form>
+            <div id="wish-success" style="display:none; text-align:center; color:#06aed8; margin-top:20px; font-size:1.2rem;">🎉 Thank you! Your wish has been sent to Mark!</div>
+        </div>
+        <p class="text-center text-gray-400 mt-8">Or contact me directly:</p>
+        <div class="text-center flex flex-col gap-4 items-center mt-4">
+            <a href="mailto:markmelad226@gmail.com" class="cyber-new">📧 Send a Message</a>
+            <a href="https://www.linkedin.com/in/mark-s-157758298" target="_blank" class="cyber-new">💼 LinkedIn</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="flex gap-4 justify-center mb-4">
+            <a href="https://www.linkedin.com/in/mark-s-157758298" target="_blank" class="text-3xl text-gray-400 hover:text-cyan-400 transition"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:markmelad226@gmail.com" class="text-3xl text-gray-400 hover:text-cyan-400 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-500">© 2026 Mark Melad Ebrahim - Cybersecurity Portfolio</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
